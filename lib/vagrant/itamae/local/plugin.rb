@@ -7,13 +7,11 @@ module VagrantPlugins
         name 'itamae'
         provisioner(:itamae) do
           require_relative 'provisioner'
-          puts 'provisioner loaded'
           Provisioner
         end
 
         config(:itamae, :provisioner) do
           require_relative 'config'
-          puts 'config loaded'
           Config
         end
       end

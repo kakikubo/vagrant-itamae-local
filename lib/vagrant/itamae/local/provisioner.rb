@@ -15,7 +15,6 @@ module VagrantPlugins
             user: @machine.ssh_info[:username],
             key:  @machine.ssh_info[:private_key_path][0]
           }
-          puts "itamae runner"
 
           ::Itamae.logger.level = config.log_level
           ::Itamae::Runner.run(config.recipes, config.backend.to_sym, options)
