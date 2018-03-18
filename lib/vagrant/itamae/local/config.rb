@@ -19,6 +19,7 @@ module VagrantPlugins
           @sudo    = UNSET_VALUE
           @shell   = UNSET_VALUE
           @log_level = UNSET_VALUE
+
           @backend = UNSET_VALUE
         end
 
@@ -31,11 +32,18 @@ module VagrantPlugins
           @shell = nil if @shell == UNSET_VALUE
 
           @sudo = false if @sudo == UNSET_VALUE
-          @backend = false if @backend == UNSET_VALUE
-
           @log_level = ::Logger.const_get((@log_level == UNSET_VALUE ? :info : @log_level).upcase)
+
+          @backend = 'ssh' if @backend == UNSET_VALUE
         end
       end
+    end
+  end
+end
+module VagrantPlugins
+  module Itamae
+    class Config
+      prepend Itamae::Local
     end
   end
 end

@@ -1,12 +1,16 @@
-require "vagrant/itamae/local/version"
+require 'itamae'
+require 'vagrant-itamae'
+require 'vagrant/itamae/local/version'
+require 'vagrant/itamae/local/plugin'
 
-module Vagrant
-  module Itamae
-    module Local
-      def self.greet
-        'Hello World'
-      end
-      # Your code goes here...
-    end
-  end
-end
+#module VagrantPlugins
+#  module Itamae
+#    class Config < Vagrant.plugin('2', :config)
+#      prepend Vagrant::Itamae::Local
+#    end
+#    class Plugin < Vagrant.plugin('2')
+#      prepend Vagrant::Itamae::Local
+#    end
+#  end
+#end
+
