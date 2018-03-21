@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["kakikubo teruo"]
   spec.email         = ["kakikubo@gmail.com"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
-  spec.homepage      = "https://github.com/kakikubo"
+  spec.summary       = %q{useful for vagrant itamae extension.}
+  spec.description   = %q{additional local option for vagrant-itamae.}
+  spec.homepage      = "https://github.com/kakikubo/vagrant-itamae-local"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
